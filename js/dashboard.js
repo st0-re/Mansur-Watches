@@ -2,10 +2,10 @@
 
 //
 // backend
-const imgUrl = "http://aliemadhadi-001-site1.htempurl.com/Content/imgs/";
+const imgUrl = "https://aliemadhadi-001-site1.htempurl.com/Content/imgs/";
 function fetchData() {
     // Make a GET request using fetch
-    return fetch(`http://aliemadhadi-001-site1.htempurl.com/Purchases/Get`)
+    return fetch(`https://aliemadhadi-001-site1.htempurl.com/Purchases/Get`)
         .then(response => {
             console.log(response)
             if (!response.ok) {
@@ -45,7 +45,7 @@ function Display(data) {
 function Delete(id) {
     console.log(id);
     function fetchData() {
-        return fetch(`http://aliemadhadi-001-site1.htempurl.com/Purchases/Delete?id=${id}`, {
+        return fetch(`https://aliemadhadi-001-site1.htempurl.com/Purchases/Delete?id=${id}`, {
             method:"Delete",
         })
             .then(response => {
@@ -70,7 +70,7 @@ function Delete(id) {
 // prds//
 function ProductsData() {
     // Make a GET request using fetch
-    return fetch(`http://aliemadhadi-001-site1.htempurl.com/Product/GetAll`)
+    return fetch(`https://aliemadhadi-001-site1.htempurl.com/Product/GetAll`)
         .then(response => {
             console.log(response)
             if (!response.ok) {
@@ -117,7 +117,7 @@ function upload(img) {
         imgData.append("imgUrl", img.files[0]);
         function fetchData() {
             // Make a GET request using fetch
-            return fetch(`http://aliemadhadi-001-site1.htempurl.com/Product/Add`, {
+            return fetch(`https://aliemadhadi-001-site1.htempurl.com/Product/Add`, {
                 method: 'POST',
                 body: imgData
             })
@@ -151,7 +151,7 @@ function upload(img) {
 
 function DeletePrd(id) {
     function fetchData() {
-        return fetch(`http://aliemadhadi-001-site1.htempurl.com/Product/Delete?id=${id}`, {
+        return fetch(`https://aliemadhadi-001-site1.htempurl.com/Product/Delete?id=${id}`, {
             method:"Delete",
         })
             .then(response => {
