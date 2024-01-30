@@ -135,7 +135,7 @@ function upload(img) {
         fetchData()
             .then(data => {
                 console.log(data);
-                alert(added successfuly);
+                alert("added successfuly");
                 
             })
             .catch(error => {
