@@ -119,6 +119,7 @@ function upload(img) {
             // Make a GET request using fetch
             return fetch(`https://aliemadhadi-001-site1.htempurl.com/Product/Add`, {
                 method: 'POST',
+                 mode: 'no-cors',
                 body: imgData
             })
                 .then(response => {
