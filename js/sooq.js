@@ -1,12 +1,12 @@
-const cross = "https://cors-anywhere.herokuapp.com";
+
 let cards = document.getElementById("cards");
-const imgUrl = "${cross}/http://aliemadhadi-001-site1.htempurl.com/Content/imgs/";
+const imgUrl = "https://aliemadhadi-001-site1.htempurl.com/Content/imgs/";
 
 
 // backend
 function fetchData() {
     // Make a GET request using fetch
-  return fetch(`${cross}/http://aliemadhadi-001-site1.htempurl.com/Product/GetAll`)
+  return fetch(`https://aliemadhadi-001-site1.htempurl.com/Product/GetAll`)
         .then(response => {
             console.log(response)
             if (!response.ok) {
@@ -88,7 +88,7 @@ function SetData() {
   // backend
   function fetchData() {
     // Make a GET request using fetch
-    return fetch(`${cross}/http://aliemadhadi-001-site1.htempurl.com/Purchases/Add`, {
+    return fetch(`https://aliemadhadi-001-site1.htempurl.com/Purchases/Add`, {
       method: 'POST',
       body: Order
     })
